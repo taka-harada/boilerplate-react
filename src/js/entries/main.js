@@ -2,6 +2,7 @@ import '../../scss/style.scss';
 import jQuery from 'jquery';
 import {gWindowWidth} from '../modules/gWidth';
 import {addGoogleMap} from '../modules/map';
+import '../modules/react.js';
 // import {hello} from './sub';
 
 const $ = jQuery;

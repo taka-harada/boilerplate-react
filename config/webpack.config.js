@@ -49,7 +49,8 @@ const createConfig = async () => {
             options: {
               sourceMap: true
             }
-          }, {
+          },
+          {
             loader: 'postcss-loader',
             options: {
               plugins: (loader) => [
@@ -59,7 +60,8 @@ const createConfig = async () => {
               ],
               sourceMap: true
             }
-          }, {
+          },
+          {
             loader: 'sass-loader',
             options: {
               sourceMap: true
@@ -67,7 +69,8 @@ const createConfig = async () => {
           }],
           publicPath: '../../'
         })
-      }, {
+      },
+      {
         test: /\.(jpe?g|png|gif|svg|ico)(\?.+)?$/,
         include: [
           path.resolve(__dirname, '../src/img')
@@ -79,7 +82,8 @@ const createConfig = async () => {
             outputPath: url => url.replace(/src\//, 'assets/')
           }
         }
-      }, {
+      },
+      {
         test: /\.(eot|otf|ttf|woff2?|svg)(\?.+)?$/,
         include: [
           path.resolve(__dirname, '../src', 'font')
@@ -90,7 +94,8 @@ const createConfig = async () => {
             name: 'assets/font/[name].[ext]'
           }
         }
-      }, {
+      },
+      {
         test: /\.pug$/,
         use: [{
           loader: 'html-loader',
@@ -104,8 +109,9 @@ const createConfig = async () => {
             exports: false
           }
         }]
-      }, {
-        test: /\.js$/,
+      },
+      {
+        test: /\.(js|jsx)$/,
         include: [
           path.resolve(__dirname, '../src')
         ],
@@ -119,9 +125,6 @@ const createConfig = async () => {
                 }]
               ]
             }
-          },
-          {
-            loader: 'eslint-loader'
           }
         ],
         exclude: /node_modules/
@@ -142,14 +145,14 @@ const createConfig = async () => {
       }]),
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
-        chunks: ['top', 'archive'],
-      }),
+        chunks: ['top', 'archive']
+      })
     ].concat(arr),
     resolve: {
-      extensions: ['.js']
+      extensions: ['.js', '.jsx']
     },
     devServer: {
-      contentBase: path.join(__dirname, '../dist'),
+      contentBase: path.join(__dirname, '../dist/html'),
       port: 8081,
       watchContentBase: true,
       open: true
