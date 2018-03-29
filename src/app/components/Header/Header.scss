@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/* header
+------------------------ */
+#hvc-wrap > header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+
+  // max-width: 1320px;
+  margin: 0 auto;
+}
+
+#hvc-wrap.page > header {
+  z-index: 2;
+  background-color: #fff;
+  height: 60px;
+}
+
+#hvc-wrap.top > header {
+  z-index: 1;
+  opacity: 1;
+  transition: opacity .8s;
+}
+
+#hvc-wrap.top > header.alp {
+  // opacity: 0;
+
+  &.scr {
+    opacity: 1;
+
+    &.anim {
+      /* opacity: 1; */
+    }
+  }
+}
+
+/* scr */
+#hvc-wrap.top > header.scr {
+  z-index: 2;
+  background-color: #fff;
+  height: 60px;
+
+  /* opacity: 1; */
+  top: -100px;
+
+  &.anim {
+    transition: top .3s;
+    opacity: 1;
+  }
+
+  &.gst {
+    position: fixed;
+    top: 0;
+    opacity: 1 !important;
+  }
+
+  /* &.alp {
+  opacity: 1;
+  } */
+}
+
+#hvc-wrap.top > header.scr #logo,
+#logo {
+  position: absolute;
+  top: 0;
+  left: 80px;
+  right: auto;
+  z-index: 1;
+
+  a {
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+    width: 100px;
+    height: 100px;
+    padding-top: 28px;
+    background-color: #ecdd04;
+
+    img {
+      width: 44px;
+      height: 44px;
+      vertical-align: top;
+    }
+  }
+}
+
+#hvc-wrap.top #logo {
+  display: none;
+}
+
+#hvc-wrap.top > header.scr #logo {
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  #hvc-wrap.top > header.scr #logo,
+  #logo {
+    left: 60px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #hvc-wrap.top > header.scr #logo,
+  #logo {
+    left: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #hvc-wrap.top > header.scr #logo,
+  #logo {
+    /* display: none; */
+
+    top: 16px;
+    left: 0;
+    right: 0;
+
+    a {
+      width: 80px;
+      height: 20px;
+      padding-top: 0;
+      background-color: #101010;
+      /*background-image: url(../img/header/logo_sp.png);*/
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 80px 20px;
+      margin: 0 auto;
+
+      img {
+        display: none;
+      }
+    }
+  }
+
+  #hvc-wrap.top > header.scr,
+  #hvc-wrap.page > header {
+    z-index: 2;
+    background-color: #101010;
+    height: 50px;
+  }
+
+  #hvc-wrap.top > header.scr {
+    top: -50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  //
+}
