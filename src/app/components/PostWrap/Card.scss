@@ -1,0 +1,307 @@
+@charset "utf-8";
+
+/* ---------------------------------------------------------------------
+　list
+--------------------------------------------------------------------- */
+
+/* list-news */
+.list-news-bloc {
+  margin-bottom: 30px;
+}
+
+/* list-blog */
+.list-blog-cal {
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+}
+
+.list-blog-bloc {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(239, 239, 239, 1);
+
+  width: 47.62%;
+  margin-bottom: 40px;
+
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+  }
+
+  a,
+  a:visited {
+    display: block;
+  }
+
+  .txt-box-inner {
+    padding: 27px 30px 35px;
+  }
+
+  h1,
+  h2 {
+    color: #101010;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+    letter-spacing: .02em;
+
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #101010;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: normal;
+    letter-spacing: .02em;
+  }
+}
+
+.list-blog-notfound {
+  background-color: #fff;
+  text-align: center;
+
+  flex: 1;
+  padding: 150px 30px;
+
+  p {
+    color: #111;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .list-news-bloc {
+    margin-bottom: 20px;
+  }
+
+  .list-blog-bloc {
+    width: 48%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .list-news-bloc {
+    a {
+      .img-box {
+        width: 200px;
+        min-height: 120px;
+      }
+
+      .txt-box {
+        .txt-box-inner {
+          padding: 10px 30px;
+        }
+      }
+    }
+
+    a {
+      &:after {
+        right: 25px;
+      }
+
+      p.date {
+        font-size: 15px;
+
+        margin-bottom: 10px;
+      }
+
+      p.txt {
+        font-size: 16px;
+        line-height: 26px;
+
+        max-height: 52px;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body.en {
+    .list-news-bloc {
+      a {
+        p.txt {
+          font-size: 16px;
+          line-height: 26px;
+          max-height: 52px;
+        }
+      }
+    }
+  }
+
+  .list-blog-bloc {
+    margin-bottom: 25px;
+
+    .txt-box-inner {
+      padding: 20px 25px 30px;
+    }
+
+    h1,
+    h2 {
+      font-size: 16px;
+      line-height: 26px;
+
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 24px;
+    }
+  }
+
+  .list-blog-notfound {
+    padding: 120px 30px;
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .list-news-bloc {
+    margin-bottom: 15px;
+
+    a {
+      .img-box {
+        width: 150px;
+        min-height: 100px;
+      }
+
+      .txt-box {
+        .txt-box-inner {
+          padding: 11px 20px 9px;
+        }
+      }
+    }
+
+    a {
+      p.date {
+        font-size: 14px;
+
+        margin-bottom: 6px;
+      }
+
+      p.txt {
+        font-size: 14px;
+        line-height: 22px;
+
+        max-height: 44px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  body.en {
+    .list-news-bloc {
+      a {
+        p.txt {
+          font-size: 15px;
+          line-height: 23px;
+          max-height: 46px;
+        }
+      }
+    }
+  }
+
+  .list-blog-bloc {
+    margin-bottom: 20px;
+
+    .txt-box-inner {
+      padding: 16px 20px 20px;
+    }
+
+    h1,
+    h2 {
+      font-size: 15px;
+      line-height: 24px;
+
+      margin-bottom: 0;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  .list-blog-notfound {
+    padding: 100px 30px;
+
+    p {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .list-news-bloc {
+    a {
+      .img-box {
+        width: 10px;
+        min-height: 100px;
+        background-color: #303030;
+
+        img {
+          display: none;
+        }
+      }
+
+      .txt-box {
+        .txt-box-inner {
+          padding: 12px 20px 8px;
+        }
+      }
+    }
+
+    a {
+      p.date {
+        font-size: 14px;
+
+        margin-bottom: 6px;
+      }
+
+      p.txt {
+        font-size: 14px;
+        line-height: 22px;
+
+        max-height: 44px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .list-blog-bloc {
+    width: 48.5%;
+    margin-bottom: 15px;
+
+    .txt-box-inner {
+      padding: 14px 12px 16px;
+    }
+
+    h1,
+    h2 {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .list-blog-notfound {
+    padding: 80px 15px;
+
+    p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}

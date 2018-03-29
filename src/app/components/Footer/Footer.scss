@@ -1,0 +1,304 @@
+@charset "utf-8";
+
+/* footer
+------------------------ */
+
+#footer {
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  background-color: #303030;
+  padding: 40px 0;
+  display: flex;
+  flex-flow: row;
+  height: auto;
+
+  > * {
+    box-sizing: border-box;
+    height: 40px;
+  }
+
+  .foot-menu {
+    order: 1;
+    flex-grow: 1;
+    padding: 8px 22px 0 0;
+    text-align: right;
+    letter-spacing: -.4em;
+
+    li {
+      display: inline-block;
+      vertical-align: top;
+      letter-spacing: normal;
+    }
+
+    li {
+      a {
+        position: relative;
+        text-align: right;
+        color: #fff;
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: normal;
+
+        &:before {
+          content: "|";
+          display: inline-block;
+          vertical-align: top;
+          margin: 0 20px;
+
+          color: #fff;
+          font-size: 12px;
+          line-height: 22px;
+          font-weight: normal;
+
+          padding-top: 2px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:first-child {
+        a:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .foot-logo {
+    order: 0;
+    flex-basis: 236px;
+
+    a,
+    span {
+      display: block;
+      width: 160px;
+      height: 40px;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+  }
+
+  address {
+    order: 2;
+    flex-basis: 174px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 22px;
+    padding-top: 13px;
+  }
+}
+
+body.en #footer {
+  .foot-menu {
+    padding: 9px 56px 0 0;
+
+    li {
+      a {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 22px;
+
+        &:before {
+          font-size: 13px;
+          line-height: 22px;
+          font-weight: 400;
+
+          padding-top: 3px;
+        }
+      }
+    }
+  }
+
+  address {
+    text-align: left;
+    flex-basis: 140px;
+
+    font-size: 13px;
+    line-height: 22px;
+
+    padding-top: 12px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body.en #footer {
+    .foot-menu {
+      padding: 9px 36px 0 0;
+
+      li {
+        a {
+          &:before {
+            margin: 0 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #footer {
+    .foot-logo {
+      flex-basis: 220px;
+    }
+
+    .foot-menu {
+      padding: 0 30px 0 0;
+      margin-top: -5px;
+
+      li {
+        a {
+          &:before {
+            margin: 0 15px;
+          }
+        }
+      }
+    }
+
+    address {
+      flex-basis: auto;
+      padding-top: 0;
+      position: absolute;
+      bottom: 35px;
+      right: 28px;
+      height: auto;
+    }
+  }
+
+  body.en #footer {
+    .foot-menu {
+      padding: 0 30px 0 0;
+
+      li {
+        a {
+          font-size: 12px;
+          line-height: 22px;
+
+          &:before {
+            font-size: 12px;
+            line-height: 22px;
+
+            padding-top: 3px;
+            margin: 0 12px;
+          }
+        }
+      }
+    }
+
+    address {
+      flex-basis: auto;
+      bottom: 37px;
+      padding-top: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #footer {
+    .foot-logo {
+      flex-basis: 210px;
+    }
+  }
+
+  body.en #footer {
+    .foot-menu {
+      li {
+        a {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #footer {
+    padding: 10px 0 25px;
+
+    display: flex;
+    flex-flow: column;
+
+    > * {
+      height: auto;
+    }
+
+    .foot-logo {
+      order: 1;
+      flex-basis: auto;
+
+      a,
+      span {
+        display: block;
+        width: 108px;
+        height: 27px;
+        margin: 0 auto 4px;
+      }
+    }
+
+    .foot-menu {
+      order: 0;
+      padding: 20px 0;
+      margin-top: 0;
+      text-align: center;
+
+      li {
+        display: block;
+        margin-bottom: 11px;
+
+        a {
+          font-size: 13px;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    address {
+      position: static;
+    }
+  }
+
+  body.en #footer {
+    .foot-menu {
+      padding: 20px 0;
+
+      li {
+        a {
+          font-size: 13px;
+          line-height: 22px;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    address {
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #footer {
+    //
+  }
+}

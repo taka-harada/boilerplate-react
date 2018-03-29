@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/* archive */
+.list-blog-cal,
+.list-news-cal {
+  background-color: #f4f4f4;
+  flex-grow: 1;
+  margin-top: -60px;
+}
+
+.list-news-cal {
+  .inner {
+    padding: 55px;
+    margin-top: 200px; /*ReactのView検証用*/
+  }
+}
+
+.list-blog-cal {
+  .inner {
+    padding: 55px;
+  }
+}
+
+.list-news-cal {
+  > h2 {
+    text-align: center;
+    display: block;
+    font-family: 'Poppins', "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+    font-weight: bold;
+    font-weight: 600;
+    color: #111;
+    letter-spacing: .02em;
+  }
+
+  > h2.year,
+  > h2.category {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 28px;
+
+    padding: 37px 55px 30px;
+  }
+
+  > h2.search,
+  > h2.tag,
+  > h2.archive {
+    font-size: 19px;
+    line-height: 28px;
+
+    padding: 37px 55px 30px;
+  }
+}
+
+.list-news-cal {
+  > h2 ~ .inner {
+    padding: 0 55px 55px;
+  }
+}
